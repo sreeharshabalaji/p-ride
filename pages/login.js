@@ -24,7 +24,11 @@ const Login = () => {
   };
 
   const handleSubmit = () => {
-    console.log(loginInput);
+    if (!loginInput.email) {
+      alert("Email cannot be empty.");
+    } else if (!loginInput.password) {
+      alert("Password cannnot be empty.");
+    }
   };
 
   return (
@@ -40,7 +44,6 @@ const Login = () => {
               name="email"
               placeholder="email@email.com"
               onChange={handleChange}
-              
             />
           </FormControl>
           <FormControl id="password">

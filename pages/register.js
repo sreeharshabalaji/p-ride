@@ -30,19 +30,14 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) =>
-   {
-    
+  const handleSubmit = () => {
     if (!registerInput.fullname) {
       alert("Full name cannot be empty.");
-    }
-    else if (!registerInput.email) {
+    } else if (!registerInput.email) {
       alert("Email cannot be empty.");
+    } else if (!registerInput.password) {
+      alert("Password cannnot be empty.");
     }
-    else if (!registerInput.password) {
-      alert("password cannnot be empty.");
-    }
-
   };
 
   return (
